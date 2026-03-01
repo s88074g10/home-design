@@ -20,93 +20,175 @@
             text-align: center;
             padding: 50px 20px;
         }
-        .header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 2px;
+        .header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 2px; }
+        .header p { margin-top: 10px; font-size: 1.05rem; opacity: 0.9; }
+
+        /* Nav */
+        .nav {
+            background: #fff;
+            border-bottom: 1px solid #e8e0d8;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+            padding: 14px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
-        .header p {
-            margin-top: 10px;
-            font-size: 1.05rem;
-            opacity: 0.9;
+        .nav a {
+            display: inline-block;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 4px 12px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            transition: all 0.2s;
+        }
+        .nav a:hover, .nav a.active {
+            background: #c49060;
+            color: #fff;
         }
 
-        /* Room Section */
-        .room-section {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
+        /* Category Section */
+        .category {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-        .room-card {
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 8px;
+            padding-left: 16px;
+            border-left: 4px solid #c49060;
+        }
+        .category-subtitle {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 30px;
+            padding-left: 20px;
+        }
+
+        /* Location Block */
+        .location-block {
             background: #fff;
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            margin-bottom: 36px;
             overflow: hidden;
-            margin-bottom: 40px;
         }
-        .room-label {
-            display: inline-block;
-            background: #c49060;
+        .location-header {
+            background: linear-gradient(135deg, #c49060, #b07848);
             color: #fff;
-            padding: 8px 24px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 3px;
-            border-radius: 0 0 12px 0;
+            padding: 16px 28px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        .room-body {
-            padding: 30px 35px 35px;
+        .location-header h3 {
+            font-size: 1.15rem;
+            letter-spacing: 1px;
         }
-        .product-name {
-            font-size: 1.6rem;
+        .location-header .qty {
+            background: rgba(255,255,255,0.25);
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        /* Candidate Cards */
+        .candidates {
+            padding: 24px;
+        }
+        .candidate {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            padding: 20px;
+            border: 2px solid #f0ebe5;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .candidate:hover {
+            border-color: #d4a574;
+            box-shadow: 0 4px 16px rgba(196,144,96,0.12);
+        }
+        .candidate:last-child { margin-bottom: 0; }
+
+        .rank {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 4px;
+        }
+        .rank-badge {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #fff;
+        }
+        .rank-1 .rank-badge { background: linear-gradient(135deg, #f0c040, #e0a020); }
+        .rank-2 .rank-badge { background: linear-gradient(135deg, #b8b8b8, #909090); }
+        .rank-3 .rank-badge { background: linear-gradient(135deg, #d4956a, #b87848); }
+
+        .candidate-body { min-width: 0; }
+
+        .candidate-top {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        .candidate-name {
+            font-size: 1.2rem;
             font-weight: 700;
             color: #2c2c2c;
-            margin-bottom: 6px;
         }
-        .product-price {
-            font-size: 1.15rem;
+        .candidate-price {
+            font-size: 1rem;
             color: #c49060;
             font-weight: 600;
-            margin-bottom: 18px;
         }
 
-        /* Specs */
-        .specs {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-        .spec-item {
-            background: #faf7f4;
-            border-radius: 10px;
-            padding: 12px 16px;
-        }
-        .spec-item .label {
-            font-size: 0.78rem;
+        .candidate-desc {
+            font-size: 0.88rem;
             color: #999;
-            margin-bottom: 3px;
-        }
-        .spec-item .value {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #3a3a3a;
-        }
-
-        .product-desc {
-            font-size: 0.95rem;
-            color: #777;
             font-style: italic;
-            margin-bottom: 24px;
-            padding-left: 16px;
-            border-left: 3px solid #d4a574;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 2px solid #e8e0d8;
         }
 
-        /* Image Gallery */
+        /* Specs inline */
+        .specs-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+        .spec-tag {
+            background: #faf7f4;
+            border-radius: 8px;
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            color: #777;
+        }
+        .spec-tag strong { color: #555; }
+
+        /* Gallery - 3 images */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
         }
         .gallery a {
             display: block;
@@ -115,34 +197,46 @@
             transition: transform 0.25s, box-shadow 0.25s;
         }
         .gallery a:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
         }
         .gallery img {
             width: 100%;
-            height: 220px;
+            height: 180px;
             object-fit: cover;
             display: block;
         }
 
         .source-link {
             display: inline-block;
-            margin-top: 18px;
+            margin-top: 12px;
             color: #c49060;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.82rem;
             font-weight: 600;
             border-bottom: 1px dashed #c49060;
             transition: color 0.2s;
         }
         .source-link:hover { color: #a0714a; }
 
+        /* Empty Slot */
+        .candidate.empty {
+            border: 2px dashed #ddd;
+            background: #fcfaf8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
         /* Lightbox */
         .lightbox-overlay {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.85);
+            background: rgba(0,0,0,0.88);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -159,165 +253,312 @@
         /* Footer */
         .footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 30px 20px 40px;
             font-size: 0.82rem;
             color: #bbb;
         }
 
-        @media (max-width: 600px) {
+        /* Divider */
+        .section-divider {
+            border: none;
+            border-top: 1px solid #e8e0d8;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 700px) {
             .header h1 { font-size: 1.4rem; }
-            .room-body { padding: 20px; }
-            .product-name { font-size: 1.3rem; }
-            .gallery { grid-template-columns: 1fr 1fr; }
-            .gallery img { height: 160px; }
+            .candidate {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .rank { justify-content: flex-start; }
+            .gallery { grid-template-columns: repeat(3, 1fr); }
+            .gallery img { height: 100px; }
+            .nav a { margin: 2px 6px; font-size: 0.8rem; padding: 5px 10px; }
         }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>新家壁燈選擇</h1>
-    <p>以下是我選定的壁燈款式，請設計師參考</p>
+    <h1>新家燈具選擇清單</h1>
+    <p>各位置候選燈具 TOP 3，請設計師參考</p>
 </div>
 
-<div class="room-section">
+<div class="nav">
+    <a href="#pendant">吊燈</a>
+    <a href="#wall">壁燈</a>
+    <a href="#ceiling">吸頂燈</a>
+</div>
 
-    <!-- 主臥壁燈 -->
-    <div class="room-card">
-        <div class="room-label">主臥壁燈</div>
-        <div class="room-body">
-            <div class="product-name">晴天熊壁燈</div>
-            <div class="product-price">NT$ 2,680 起（預購）</div>
-            <p class="product-desc">
-                晴天熊輕抱一顆溫暖的光，像把好天氣悄悄留在牆邊。粉白色調柔和展開，為空間添上一份安心與童真的陪伴。
-            </p>
-            <div class="specs">
-                <div class="spec-item">
-                    <div class="label">尺寸</div>
-                    <div class="value">長42 × 寬16 × 高16 cm</div>
-                </div>
-                <div class="spec-item">
-                    <div class="label">燈罩</div>
-                    <div class="value">直徑 12 cm</div>
-                </div>
-                <div class="spec-item">
-                    <div class="label">光源</div>
-                    <div class="value">G9 × 1</div>
-                </div>
-                <div class="spec-item">
-                    <div class="label">材質</div>
-                    <div class="value">金屬 + PE</div>
-                </div>
-                <div class="spec-item">
-                    <div class="label">顏色</div>
-                    <div class="value">粉色 + 白色</div>
+<!-- ==================== 吊燈 ==================== -->
+<div class="category" id="pendant">
+    <h2 class="category-title">吊燈</h2>
+    <p class="category-subtitle">Pendant Light</p>
+
+    <!-- 玄關 -->
+    <div class="location-block">
+        <div class="location-header">
+            <h3>玄關</h3>
+            <span class="qty">x 1</span>
+        </div>
+        <div class="candidates">
+            <!-- #1 泥也町 A款 -->
+            <div class="candidate">
+                <div class="rank rank-1"><div class="rank-badge">1</div></div>
+                <div class="candidate-body">
+                    <div class="candidate-top">
+                        <span class="candidate-name">泥也町吊燈（A款）</span>
+                        <span class="candidate-price">NT$ 2,690</span>
+                    </div>
+                    <p class="candidate-desc">
+                        像一座靜謐的手感之城，以泥土為筆，書寫著溫柔與質樸的日常。粗糙中帶有柔韌，簡約中蘊藏深意。
+                    </p>
+                    <div class="specs-inline">
+                        <span class="spec-tag"><strong>尺寸</strong> 寬15 x 深15 x 高75 cm</span>
+                        <span class="spec-tag"><strong>光源</strong> LED 12W 3000K</span>
+                        <span class="spec-tag"><strong>材質</strong> 水泥 + 金屬 + 塑膠</span>
+                        <span class="spec-tag"><strong>顏色</strong> 灰 + 白</span>
+                        <span class="spec-tag"><strong>電線</strong> 160 cm</span>
+                    </div>
+                    <div class="gallery">
+                        <a href="https://www.18park.com.tw/data/goods/202504/1744853726542679717.jpg">
+                            <img src="https://www.18park.com.tw/data/goods/202504/1744853726542679717.jpg" alt="泥也町吊燈 1" loading="lazy">
+                        </a>
+                        <a href="https://www.18park.com.tw/data/goods/202504/1744853727914679068.jpg">
+                            <img src="https://www.18park.com.tw/data/goods/202504/1744853727914679068.jpg" alt="泥也町吊燈 2" loading="lazy">
+                        </a>
+                        <a href="https://www.18park.com.tw/data/goods/202504/1744853728053826110.jpg">
+                            <img src="https://www.18park.com.tw/data/goods/202504/1744853728053826110.jpg" alt="泥也町吊燈 3" loading="lazy">
+                        </a>
+                    </div>
+                    <a class="source-link" href="https://www.18park.com.tw/zh-tw/product.php?act=view&id=7664" target="_blank">
+                        前往 18Park 商品頁面 →
+                    </a>
                 </div>
             </div>
-            <div class="gallery">
-                <a href="https://www.18park.com.tw/data/goods/202512/1766730875387375756.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1766730875387375756.png" alt="晴天熊壁燈 圖1" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1766730872627359113.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1766730872627359113.png" alt="晴天熊壁燈 圖2" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1766730871915599319.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1766730871915599319.png" alt="晴天熊壁燈 圖3" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1766730876722009627.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1766730876722009627.png" alt="晴天熊壁燈 圖4" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1766730873972452893.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1766730873972452893.png" alt="晴天熊壁燈 圖5" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1766730870800409425.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1766730870800409425.png" alt="晴天熊壁燈 圖6" loading="lazy">
-                </a>
+            <!-- #2 空 -->
+            <div class="candidate empty">
+                <div class="rank rank-2"><div class="rank-badge">2</div></div>
+                <span>尚未選擇</span>
             </div>
-            <a class="source-link" href="https://www.18park.com.tw/zh-tw/product.php?act=view&id=7974" target="_blank">
-                前往 18Park 商品頁面 →
-            </a>
+            <!-- #3 空 -->
+            <div class="candidate empty">
+                <div class="rank rank-3"><div class="rank-badge">3</div></div>
+                <span>尚未選擇</span>
+            </div>
         </div>
     </div>
 
-    <!-- 次臥壁燈 -->
-    <div class="room-card">
-        <div class="room-label">次臥壁燈</div>
-        <div class="room-body">
-            <div class="product-name">法朵壁燈</div>
-            <div class="product-price">NT$ 5,980 起</div>
-            <p class="product-desc">
-                如同法朵旋律般輕柔，花瓣玻璃在光影中悄悄綻放，流露一份不經意的浪漫。全銅的線條宛如吟唱者的指尖，輕托白與粉的光色，讓空間響起柔暖的節奏。
-            </p>
-            <div class="specs">
-                <div class="spec-item">
-                    <div class="label">燈體尺寸</div>
-                    <div class="value">高40 × 寬32 × 深21 cm</div>
-                </div>
-                <div class="spec-item">
-                    <div class="label">底座</div>
-                    <div class="value">高16 × 寬10 × 高2 cm</div>
-                </div>
-                <div class="spec-item">
-                    <div class="label">玻璃</div>
-                    <div class="value">長15 × 寬9.5 cm</div>
-                </div>
-                <div class="spec-item">
-                    <div class="label">光源</div>
-                    <div class="value">G4 × 2</div>
-                </div>
-                <div class="spec-item">
-                    <div class="label">材質</div>
-                    <div class="value">全銅 + 玻璃</div>
-                </div>
-                <div class="spec-item">
-                    <div class="label">顏色</div>
-                    <div class="value">白色 / 粉色（2色可選）</div>
+    <!-- 餐廳 -->
+    <div class="location-block">
+        <div class="location-header">
+            <h3>餐廳</h3>
+            <span class="qty">x 1</span>
+        </div>
+        <div class="candidates">
+            <div class="candidate empty">
+                <div class="rank rank-1"><div class="rank-badge">1</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-2"><div class="rank-badge">2</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-3"><div class="rank-badge">3</div></div>
+                <span>尚未選擇</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ==================== 壁燈 ==================== -->
+<div class="category" id="wall">
+    <h2 class="category-title">壁燈</h2>
+    <p class="category-subtitle">Wall Light</p>
+
+    <!-- 客廳 -->
+    <div class="location-block">
+        <div class="location-header">
+            <h3>客廳</h3>
+            <span class="qty">x 1</span>
+        </div>
+        <div class="candidates">
+            <!-- #1 宇宙人 -->
+            <div class="candidate">
+                <div class="rank rank-1"><div class="rank-badge">1</div></div>
+                <div class="candidate-body">
+                    <div class="candidate-top">
+                        <span class="candidate-name">宇宙人吸頂/壁燈</span>
+                        <span class="candidate-price">NT$ 3,480</span>
+                    </div>
+                    <p class="candidate-desc">
+                        宛如來自銀河的奇幻光源，簡約流線的設計勾勒出未來感。溫暖柔和的光線，適合現代、兒童或創意空間。
+                    </p>
+                    <div class="specs-inline">
+                        <span class="spec-tag"><strong>燈體</strong> 直徑49 x 高5 cm</span>
+                        <span class="spec-tag"><strong>底座</strong> 寬38 x 深17 x 高3 cm</span>
+                        <span class="spec-tag"><strong>光源</strong> LED 36W 三色溫</span>
+                        <span class="spec-tag"><strong>材質</strong> 金屬 / 鋁 / 樹脂 / 壓克力</span>
+                        <span class="spec-tag"><strong>顏色</strong> 白色</span>
+                    </div>
+                    <div class="gallery">
+                        <a href="https://www.18park.com.tw/data/goods/202503/1742183153771918589.jpg">
+                            <img src="https://www.18park.com.tw/data/goods/202503/1742183153771918589.jpg" alt="宇宙人壁燈 1" loading="lazy">
+                        </a>
+                        <a href="https://www.18park.com.tw/data/goods/202503/1742182667469031265.jpg">
+                            <img src="https://www.18park.com.tw/data/goods/202503/1742182667469031265.jpg" alt="宇宙人壁燈 2" loading="lazy">
+                        </a>
+                        <a href="https://www.18park.com.tw/data/goods/202503/1742182669095226796.jpg">
+                            <img src="https://www.18park.com.tw/data/goods/202503/1742182669095226796.jpg" alt="宇宙人壁燈 3" loading="lazy">
+                        </a>
+                    </div>
+                    <a class="source-link" href="https://www.18park.com.tw/zh-tw/product.php?act=view&id=7610" target="_blank">
+                        前往 18Park 商品頁面 →
+                    </a>
                 </div>
             </div>
-            <div class="gallery">
-                <a href="https://www.18park.com.tw/data/goods/202512/1765360398656291766.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765360398656291766.png" alt="法朵壁燈 圖1" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765416405873518900.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765416405873518900.png" alt="法朵壁燈 圖2" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765416404719750755.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765416404719750755.png" alt="法朵壁燈 圖3" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765360395989059356.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765360395989059356.png" alt="法朵壁燈 圖4" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765360397918192240.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765360397918192240.png" alt="法朵壁燈 圖5" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765360400269418605.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765360400269418605.png" alt="法朵壁燈 圖6" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765360399744040442.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765360399744040442.png" alt="法朵壁燈 圖7" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765416406608590072.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765416406608590072.png" alt="法朵壁燈 圖8" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765416405817525489.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765416405817525489.png" alt="法朵壁燈 圖9" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765360396446177466.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765360396446177466.png" alt="法朵壁燈 圖10" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765360397550033140.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765360397550033140.png" alt="法朵壁燈 圖11" loading="lazy">
-                </a>
-                <a href="https://www.18park.com.tw/data/goods/202512/1765360400055027106.png" target="_blank">
-                    <img src="https://www.18park.com.tw/data/goods/202512/1765360400055027106.png" alt="法朵壁燈 圖12" loading="lazy">
-                </a>
+            <!-- #2 多摩壁燈 -->
+            <div class="candidate">
+                <div class="rank rank-2"><div class="rank-badge">2</div></div>
+                <div class="candidate-body">
+                    <div class="candidate-top">
+                        <span class="candidate-name">多摩壁燈</span>
+                        <span class="candidate-price">NT$ 1,580</span>
+                    </div>
+                    <p class="candidate-desc">
+                        現代時尚的設計風格，任何空間都可以搭配唯美的間接光源，透射出迷人的明亮溫度，細膩的做工成就優質的燈飾之作。
+                    </p>
+                    <div class="specs-inline">
+                        <span class="spec-tag"><strong>尺寸</strong> 寬26.5 x 高22 x 深15 cm</span>
+                        <span class="spec-tag"><strong>燈罩</strong> 直徑12 cm</span>
+                        <span class="spec-tag"><strong>光源</strong> G9 x 1</span>
+                        <span class="spec-tag"><strong>材質</strong> 鐵藝 / PC / 玻璃</span>
+                        <span class="spec-tag"><strong>顏色</strong> 黑胡桃木金 / 砂黑金</span>
+                    </div>
+                    <div class="gallery">
+                        <a href="https://www.18park.com.tw/data/goods/202108/1630389421681455015.jpg">
+                            <img src="https://www.18park.com.tw/data/goods/202108/1630389421681455015.jpg" alt="多摩壁燈 1" loading="lazy">
+                        </a>
+                        <a href="https://www.18park.com.tw/data/goods/202108/1630389421235463707.jpg">
+                            <img src="https://www.18park.com.tw/data/goods/202108/1630389421235463707.jpg" alt="多摩壁燈 2" loading="lazy">
+                        </a>
+                        <a href="https://www.18park.com.tw/data/goods/202108/1630389422533037618.jpg">
+                            <img src="https://www.18park.com.tw/data/goods/202108/1630389422533037618.jpg" alt="多摩壁燈 3" loading="lazy">
+                        </a>
+                    </div>
+                    <a class="source-link" href="https://www.18park.com.tw/zh-tw/product.php?act=view&id=5566" target="_blank">
+                        前往 18Park 商品頁面 →
+                    </a>
+                </div>
             </div>
-            <a class="source-link" href="https://www.18park.com.tw/zh-tw/product.php?act=view&id=7956" target="_blank">
-                前往 18Park 商品頁面 →
-            </a>
+            <!-- #3 空 -->
+            <div class="candidate empty">
+                <div class="rank rank-3"><div class="rank-badge">3</div></div>
+                <span>尚未選擇</span>
+            </div>
         </div>
     </div>
 
+    <!-- 次臥 -->
+    <div class="location-block">
+        <div class="location-header">
+            <h3>次臥</h3>
+            <span class="qty">x 1</span>
+        </div>
+        <div class="candidates">
+            <div class="candidate empty">
+                <div class="rank rank-1"><div class="rank-badge">1</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-2"><div class="rank-badge">2</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-3"><div class="rank-badge">3</div></div>
+                <span>尚未選擇</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ==================== 吸頂燈 ==================== -->
+<div class="category" id="ceiling">
+    <h2 class="category-title">吸頂燈</h2>
+    <p class="category-subtitle">Ceiling Light</p>
+
+    <!-- 儲藏室 -->
+    <div class="location-block">
+        <div class="location-header">
+            <h3>儲藏室</h3>
+            <span class="qty">x 1</span>
+        </div>
+        <div class="candidates">
+            <div class="candidate empty">
+                <div class="rank rank-1"><div class="rank-badge">1</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-2"><div class="rank-badge">2</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-3"><div class="rank-badge">3</div></div>
+                <span>尚未選擇</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 前陽台 -->
+    <div class="location-block">
+        <div class="location-header">
+            <h3>前陽台</h3>
+            <span class="qty">x 1</span>
+        </div>
+        <div class="candidates">
+            <div class="candidate empty">
+                <div class="rank rank-1"><div class="rank-badge">1</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-2"><div class="rank-badge">2</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-3"><div class="rank-badge">3</div></div>
+                <span>尚未選擇</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 後陽台 -->
+    <div class="location-block">
+        <div class="location-header">
+            <h3>後陽台</h3>
+            <span class="qty">x 1</span>
+        </div>
+        <div class="candidates">
+            <div class="candidate empty">
+                <div class="rank rank-1"><div class="rank-badge">1</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-2"><div class="rank-badge">2</div></div>
+                <span>尚未選擇</span>
+            </div>
+            <div class="candidate empty">
+                <div class="rank rank-3"><div class="rank-badge">3</div></div>
+                <span>尚未選擇</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Lightbox -->
@@ -326,7 +567,7 @@
 </div>
 
 <div class="footer">
-    燈具參考頁面 — 圖片來源：<a href="https://www.18park.com.tw" target="_blank" style="color:#c49060;">18Park</a>
+    新家燈具選擇清單 — 圖片來源：<a href="https://www.18park.com.tw" target="_blank" style="color:#c49060;">18Park</a>
 </div>
 
 <script>
@@ -344,6 +585,15 @@
     lightbox.addEventListener('click', () => {
         lightbox.classList.remove('active');
         lightboxImg.src = '';
+    });
+
+    // Smooth scroll for nav
+    document.querySelectorAll('.nav a').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
     });
 </script>
 

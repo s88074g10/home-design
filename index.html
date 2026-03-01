@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新家燈具 & 設備選擇 — 設計師參考</title>
+    <title>新家裝潢溝通清單 — 設計師參考</title>
     <style>
         :root {
             --gold: #c49060;
@@ -172,6 +172,55 @@
         }
         .equip-reason li { margin-bottom: 4px; }
 
+        /* ===== Communication Section ===== */
+        .comm {
+            background: var(--card); border-radius: var(--radius);
+            box-shadow: 0 3px 18px rgba(0,0,0,0.05);
+            margin-bottom: 32px; overflow: hidden;
+        }
+        .comm-header {
+            color: #fff; padding: 14px 26px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .comm-header.reply { background: linear-gradient(135deg, #6a9a6e, #4e7e52); }
+        .comm-header.question { background: linear-gradient(135deg, #7a7aaf, #5c5c8f); }
+        .comm-header h3 { font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; }
+        .comm-body { padding: 24px; }
+
+        .comm-item {
+            padding: 20px; border: 2px solid var(--border); border-radius: var(--radius);
+            margin-bottom: 14px; transition: border-color 0.2s;
+        }
+        .comm-item:last-child { margin-bottom: 0; }
+        .comm-item:hover { border-color: #c5d8c7; }
+
+        .comm-item-header {
+            display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+        }
+        .comm-icon {
+            width: 32px; height: 32px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; color: #fff; flex-shrink: 0;
+        }
+        .comm-icon.check { background: linear-gradient(135deg, #6a9a6e, #4e7e52); }
+        .comm-icon.ask { background: linear-gradient(135deg, #7a7aaf, #5c5c8f); }
+        .comm-item-title { font-size: 1.05rem; font-weight: 700; }
+        .comm-item-content {
+            font-size: 0.92rem; color: #666; line-height: 1.9;
+            padding-left: 42px;
+        }
+        .comm-item-content strong { color: var(--text); }
+        .comm-highlight {
+            background: #f0f7f1; border-radius: 8px; padding: 10px 16px;
+            margin-top: 8px; font-size: 0.88rem; color: #4e7e52; font-weight: 600;
+        }
+        .comm-highlight.purple {
+            background: #f0f0f7; color: #5c5c8f;
+        }
+
+        .nav a.nav-reply:hover, .nav a.nav-reply.active { background: #6a9a6e; }
+        .nav a.nav-question:hover, .nav a.nav-question.active { background: #7a7aaf; }
+
         /* ===== Divider ===== */
         .divider { border: none; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
 
@@ -197,8 +246,8 @@
 <body>
 
 <div class="header">
-    <h1>新家設備選擇清單</h1>
-    <p>燈具 & 熱水器 — 請設計師參考</p>
+    <h1>新家裝潢溝通清單</h1>
+    <p>燈具選擇 / 設備確認 / 待討論事項 — 請設計師參考</p>
 </div>
 
 <nav class="nav">
@@ -206,6 +255,8 @@
     <a href="#wall">壁燈</a>
     <a href="#ceiling">吸頂燈</a>
     <a href="#equipment">熱水器</a>
+    <a href="#reply" class="nav-reply">回覆事項</a>
+    <a href="#questions" class="nav-question">待確認</a>
 </nav>
 
 <!-- ============================== 吊燈 ============================== -->
@@ -535,11 +586,96 @@
     </div>
 </section>
 
+<hr class="divider">
+
+<!-- ============================== 回覆設計師事項 ============================== -->
+<section class="category" id="reply">
+    <div class="cat-head" style="border-left-color:#6a9a6e;"><h2>回覆設計師</h2><span>REPLY TO DESIGNER</span></div>
+
+    <div class="comm">
+        <div class="comm-header reply"><h3>已確認事項</h3></div>
+        <div class="comm-body">
+            <!-- 熱水器 -->
+            <div class="comm-item">
+                <div class="comm-item-header">
+                    <div class="comm-icon check">&#10003;</div>
+                    <div class="comm-item-title">熱水器型號確認</div>
+                </div>
+                <div class="comm-item-content">
+                    我們選擇 <strong>林內 Rinnai 屋內型 24L 強制排氣熱水器</strong>，型號為 <strong>REU-A2426WF-TR</strong>。
+                    <div class="comm-highlight">
+                        因陽台有加裝窗戶，依法規視為室內空間，故選用屋內型強制排氣機種。<br>
+                        請協助預留排氣管穿牆孔位，排氣管需延伸至建築物外部。
+                    </div>
+                </div>
+            </div>
+            <!-- 廁所 -->
+            <div class="comm-item">
+                <div class="comm-item-header">
+                    <div class="comm-icon check">&#10003;</div>
+                    <div class="comm-item-title">廁所配置確認</div>
+                </div>
+                <div class="comm-item-content">
+                    廁所的各項位置配置都 OK，依照先前群組內討論的方案（按照設計師建議的方式）進行即可。
+                    <div class="comm-highlight">
+                        補充一點：<strong>客浴的置物架，麻煩請幫我們安裝兩個</strong>。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================== 疑問及確認事項 ============================== -->
+<section class="category" id="questions">
+    <div class="cat-head" style="border-left-color:#7a7aaf;"><h2>疑問及確認事項</h2><span>QUESTIONS</span></div>
+
+    <div class="comm">
+        <div class="comm-header question"><h3>想請教設計師的問題</h3></div>
+        <div class="comm-body">
+            <!-- Q1 中華電信 -->
+            <div class="comm-item">
+                <div class="comm-item-header">
+                    <div class="comm-icon ask">?</div>
+                    <div class="comm-item-title">中華電信進場時間</div>
+                </div>
+                <div class="comm-item-content">
+                    想請問中華電信預計什麼時候可以進場拉線？目前有排定大概的時間嗎？
+                    <div class="comm-highlight purple">希望能提前知道，方便我們這邊跟中華電信預約。</div>
+                </div>
+            </div>
+            <!-- Q2 洗碗機 -->
+            <div class="comm-item">
+                <div class="comm-item-header">
+                    <div class="comm-icon ask">?</div>
+                    <div class="comm-item-title">洗碗機安裝結果</div>
+                </div>
+                <div class="comm-item-content">
+                    想確認一下，洗碗機最後的安裝結果如何？是否有順利裝好，還是有遇到什麼需要調整的地方？
+                </div>
+            </div>
+            <!-- Q3 完工時間 -->
+            <div class="comm-item">
+                <div class="comm-item-header">
+                    <div class="comm-icon ask">?</div>
+                    <div class="comm-item-title">預計完工時間</div>
+                </div>
+                <div class="comm-item-content">
+                    想了解目前整體工程的進度，預計的完工時間大約會是什麼時候呢？
+                    <div class="comm-highlight purple">方便我們提前安排搬家及後續的家具進場時間。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Lightbox -->
 <div class="lb" id="lb"><img src="" alt="放大" id="lb-img"></div>
 
 <div class="footer">
-    新家設備選擇清單 — 燈具圖片來源：<a href="https://www.18park.com.tw" target="_blank">18Park</a>
+    新家裝潢溝通清單 — 燈具圖片來源：<a href="https://www.18park.com.tw" target="_blank">18Park</a>
     ｜ 熱水器圖片來源：<a href="https://www.rinnai.com.tw" target="_blank">台灣林內</a>
 </div>
 
@@ -565,10 +701,10 @@
             if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
-    const sections = document.querySelectorAll('.category');
+    const sects = document.querySelectorAll('section[id]');
     window.addEventListener('scroll', () => {
         let cur = '';
-        sections.forEach(s => { if (s.offsetTop - 80 <= window.scrollY) cur = s.id; });
+        sects.forEach(s => { if (s.offsetTop - 80 <= window.scrollY) cur = s.id; });
         navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
     });
 </script>

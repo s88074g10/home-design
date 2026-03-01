@@ -81,6 +81,11 @@
             border-radius: 12px; font-size: 0.78rem; font-weight: 600;
         }
         .loc-body { padding: 22px; }
+        .pref-note {
+            font-size: 0.8rem; color: var(--text-light); font-style: italic;
+            margin-bottom: 16px; padding: 8px 14px;
+            background: #fdf8f2; border-radius: 8px; border-left: 3px solid var(--gold-light);
+        }
 
         /* ===== Candidate ===== */
         .cand {
@@ -104,7 +109,6 @@
         .cand-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
         .cand-name { font-size: 1.15rem; font-weight: 700; }
         .cand-note { font-size: 0.82rem; color: var(--gold); font-weight: 600; background: #fdf6ee; padding: 1px 10px; border-radius: 8px; }
-        .cand-price { font-size: 0.95rem; color: var(--gold); font-weight: 700; }
         .cand-desc {
             font-size: 0.85rem; color: #aaa; font-style: italic;
             margin: 8px 0 12px; padding-left: 12px; border-left: 2px solid var(--border);
@@ -267,6 +271,7 @@
     <div class="loc">
         <div class="loc-header"><h3>玄關</h3><span class="qty">x 1</span></div>
         <div class="loc-body">
+            <div class="pref-note">以下按喜好優先順序排列</div>
             <!-- #1 泥也町 B款 -->
             <div class="cand">
                 <div class="badge b1">1</div>
@@ -274,7 +279,6 @@
                     <div class="cand-top">
                         <span class="cand-name">泥也町吊燈</span>
                         <span class="cand-note">B款</span>
-                        <span class="cand-price">NT$ 2,690</span>
                     </div>
                     <p class="cand-desc">像一座靜謐的手感之城，以泥土為筆，書寫著溫柔與質樸的日常。</p>
                     <div class="tags">
@@ -298,7 +302,6 @@
                 <div class="cand-body">
                     <div class="cand-top">
                         <span class="cand-name">木都裡吊燈</span>
-                        <span class="cand-price">NT$ 3,390</span>
                     </div>
                     <p class="cand-desc">溫暖黃洞石紋理中，光彷彿被大地悄悄珍藏；胡桃木的深沉環抱著靜謐。</p>
                     <div class="tags">
@@ -323,7 +326,6 @@
                     <div class="cand-top">
                         <span class="cand-name">繡球花吊燈</span>
                         <span class="cand-note">透明款</span>
-                        <span class="cand-price">NT$ 2,990</span>
                     </div>
                     <p class="cand-desc">飽滿優雅的繡球，纖細的微露出細膩的光芒，美麗花卉造型帶出生機蓬勃。</p>
                     <div class="tags">
@@ -347,6 +349,7 @@
     <div class="loc">
         <div class="loc-header"><h3>餐廳</h3><span class="qty">x 1</span></div>
         <div class="loc-body">
+            <div class="pref-note">以下按喜好優先順序排列</div>
             <!-- #1 始自韻律 白色 -->
             <div class="cand">
                 <div class="badge b1">1</div>
@@ -354,7 +357,6 @@
                     <div class="cand-top">
                         <span class="cand-name">始自韻律吊燈</span>
                         <span class="cand-note">白色款</span>
-                        <span class="cand-price">NT$ 6,880</span>
                     </div>
                     <p class="cand-desc">恣意生長的線條，適度地呼應空氣流動的節奏，涵納各種想像和夢境蔓延的可能。</p>
                     <div class="tags">
@@ -379,7 +381,6 @@
                     <div class="cand-top">
                         <span class="cand-name">豐旅吊燈</span>
                         <span class="cand-note">橫款 7 燈</span>
-                        <span class="cand-price">NT$ 5,280</span>
                     </div>
                     <p class="cand-desc">簡約清新的木意生活設計風格，打破傳統日式木藝風格，追求更佳時尚極簡之設計。</p>
                     <div class="tags">
@@ -410,6 +411,7 @@
     <div class="loc">
         <div class="loc-header"><h3>客廳</h3><span class="qty">x 1</span></div>
         <div class="loc-body">
+            <div class="pref-note">以下按喜好優先順序排列</div>
             <!-- #1 多摩 黑胡桃木/金 -->
             <div class="cand">
                 <div class="badge b1">1</div>
@@ -417,7 +419,6 @@
                     <div class="cand-top">
                         <span class="cand-name">多摩壁燈</span>
                         <span class="cand-note">黑胡桃木/金</span>
-                        <span class="cand-price">NT$ 1,580</span>
                     </div>
                     <p class="cand-desc">現代時尚的設計風格，透射出迷人的明亮溫度，細膩的做工成就優質的燈飾之作。</p>
                     <div class="tags">
@@ -441,7 +442,6 @@
                 <div class="cand-body">
                     <div class="cand-top">
                         <span class="cand-name">交界間壁燈</span>
-                        <span class="cand-price">NT$ 3,390</span>
                     </div>
                     <p class="cand-desc">在石、木、光的交界間，時間緩緩停下。奶白玻的柔光悄然滲入黃洞石與胡桃木之間。</p>
                     <div class="tags">
@@ -465,6 +465,7 @@
     <div class="loc">
         <div class="loc-header"><h3>次臥</h3><span class="qty">x 1</span></div>
         <div class="loc-body">
+            <div class="pref-note">以下按喜好優先順序排列</div>
             <!-- #1 熊寶 上-雙燈 -->
             <div class="cand">
                 <div class="badge b1">1</div>
@@ -472,7 +473,6 @@
                     <div class="cand-top">
                         <span class="cand-name">熊寶壁燈-雙燈</span>
                         <span class="cand-note">上-雙燈款</span>
-                        <span class="cand-price">NT$ 2,180</span>
                     </div>
                     <p class="cand-desc">他從夢裡來，抱著一盞月光，輕輕掛在牆上，像是遺落的童年碎語。</p>
                     <div class="tags">
@@ -495,7 +495,6 @@
                 <div class="cand-body">
                     <div class="cand-top">
                         <span class="cand-name">女孩壁燈</span>
-                        <span class="cand-price">NT$ 2,190</span>
                     </div>
                     <p class="cand-desc">藝術創作燈具，採手工玻璃製法，天然氣泡為其美感特色。</p>
                     <div class="tags">
@@ -563,7 +562,6 @@
                     <div class="tags">
                         <span class="tag"><b>類型</b> 屋內型 24L 強制排氣</span>
                         <span class="tag"><b>出水量</b> 24L/min</span>
-                        <span class="tag"><b>建議售價</b> NT$ 51,600</span>
                         <span class="tag"><b>產地</b> 日本原裝進口</span>
                         <span class="tag"><b>保固</b> 三年（家庭用）</span>
                     </div>
@@ -622,6 +620,19 @@
                     </div>
                 </div>
             </div>
+            <!-- 開關插座面板 -->
+            <div class="comm-item">
+                <div class="comm-item-header">
+                    <div class="comm-icon check">&#10003;</div>
+                    <div class="comm-item-title">開關插座面板樣式</div>
+                </div>
+                <div class="comm-item-content">
+                    露出部分的開關及插座，我們選擇 <strong>白色按鍵搭配銀色面板</strong> 的款式，參考圖如下：
+                    <div class="ref-img-wrap" style="margin-top:12px; max-width:500px;">
+                        <img src="switch-panel.png" alt="開關插座面板 — 白色按鍵+銀色面板" loading="lazy">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -656,15 +667,15 @@
                     想確認一下，洗碗機最後的安裝結果如何？是否有順利裝好，還是有遇到什麼需要調整的地方？
                 </div>
             </div>
-            <!-- Q3 完工時間 -->
+            <!-- Q3 家具進場及細清 -->
             <div class="comm-item">
                 <div class="comm-item-header">
                     <div class="comm-icon ask">?</div>
-                    <div class="comm-item-title">預計完工時間</div>
+                    <div class="comm-item-title">各家具進場時間及細清完成時間</div>
                 </div>
                 <div class="comm-item-content">
-                    想了解目前整體工程的進度，預計的完工時間大約會是什麼時候呢？
-                    <div class="comm-highlight purple">方便我們提前安排搬家及後續的家具進場時間。</div>
+                    想請確認一下，各項家具預計的進場時間分別是什麼時候？以及細清預計何時可以完成？
+                    <div class="comm-highlight purple">方便我們提前安排搬家時程，也想確認整體交屋的時間點。</div>
                 </div>
             </div>
         </div>
